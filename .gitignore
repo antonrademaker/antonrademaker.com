@@ -162,6 +162,12 @@ ClientBin/
 *.publishsettings
 node_modules/
 bower_components/
+/src/www/public/
+/src/www/.hugo_build.lock
+/src/www/.lighthouse/
+/src/www/.lighthouseci/
+/src/www/playwright-report/
+/src/www/test-results/
 
 # RIA/Silverlight projects
 Generated_Code/

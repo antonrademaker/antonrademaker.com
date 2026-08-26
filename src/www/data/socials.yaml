@@ -1,0 +1,22 @@
+primary:
+  - name: GitHub
+    handle: '@antonrademaker'
+    url: 'https://github.com/antonrademaker'
+    description: 'Code, experiments, and public work'
+  - name: LinkedIn
+    handle: 'antonrademaker'
+    url: 'https://www.linkedin.com/in/antonrademaker/'
+    description: 'Professional experience and connections'
+secondary:
+  - name: X
+    handle: '@antonrademaker'
+    url: 'https://x.com/antonrademaker'
+    description: 'Notes and conversations'
+  - name: Bluesky
+    handle: '@antonrademaker.bsky.social'
+    url: 'https://bsky.app/profile/antonrademaker.bsky.social/'
+    description: 'A quieter social feed'
+  - name: Instagram
+    handle: '@antonrady'
+    url: 'https://www.instagram.com/antonrady/'
+    description: 'Photos and fragments'

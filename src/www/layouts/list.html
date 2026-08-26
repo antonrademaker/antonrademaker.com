@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main id="main-content" class="content-shell site-shell">
+  <section class="article" aria-labelledby="list-title">
+    <p class="eyebrow"><span class="eyebrow-index">04</span> {{ .Title }}</p>
+    <h1 id="list-title">{{ .Title }}</h1>
+    <div class="post-list">
+      {{ range .Pages }}
+      <article>
+        <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}

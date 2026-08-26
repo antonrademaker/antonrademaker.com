@@ -1,0 +1,10 @@
+{{ define "main" }}
+<main id="main-content" class="content-shell site-shell">
+  <article class="article">
+    <p class="eyebrow"><span class="eyebrow-index">04</span> {{ .Section | title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>{{ end }}
+    <div class="prose">{{ .Content }}</div>
+  </article>
+</main>
+{{ end }}

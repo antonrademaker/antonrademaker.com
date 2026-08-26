@@ -1,0 +1,94 @@
+{{ define "main" }}
+<main id="main-content">
+  <div class="home-shell">
+    <section class="hero site-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-index">01</span> Software / Architecture / Data</p>
+        <h1 id="hero-title">Anton <span>Rademaker</span></h1>
+        <p class="hero-role">Software Architect <span aria-hidden="true">/</span> Lead Engineer</p>
+        <p class="hero-intro">I design and build thoughtful systems in mostly the Microsoft ecosystem, with a soft spot for the details that make complex things feel clear.</p>
+        <a class="text-link" href="#about">A little more about me <span aria-hidden="true">&#8595;</span></a>
+      </div>
+
+      <aside class="field-sheet" aria-label="At a glance">
+        <div class="sheet-heading">
+          <span>Field note</span>
+          <span>AR / 01</span>
+        </div>
+        <div class="sheet-map" aria-hidden="true">
+          <span class="map-label map-label-top">52.04 N</span>
+          <span class="map-label map-label-bottom">05.66 E</span>
+          <span class="map-cross"></span>
+          <span class="map-marker"></span>
+        </div>
+        <dl class="sheet-data">
+          <div>
+            <dt>Based in</dt>
+            <dd>Ede, NL</dd>
+          </div>
+          <div>
+            <dt>Works at</dt>
+            <dd>ilionx</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>People + systems</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="about-section site-shell section-grid" id="about" aria-labelledby="about-title">
+      <div class="section-marker"><span>02</span><span>About</span></div>
+      <div class="about-content">
+        <div class="about-copy">
+          <h2 id="about-title">Curious about how things fit together.</h2>
+          <p>I'm Anton Rademaker, a Software Architect / Lead Engineer at ilionx. I live in Ede, the Netherlands, and work across software architecture, engineering, and data in mostly the Microsoft ecosystem. Outside work, I'm into fitness, beach volleyball, gaming, movies at the local theatre, and experimenting with AI and Home Assistant.</p>
+        </div>
+        <ul class="practice-list" aria-label="Things I spend time on">
+          <li><span>01</span><span>Software architecture</span></li>
+          <li><span>02</span><span>Engineering leadership</span></li>
+          <li><span>03</span><span>Data and new tools</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="connect-section site-shell section-grid" id="connect" aria-labelledby="connect-title">
+      <div class="section-marker"><span>03</span><span>Connect</span></div>
+      <div class="connect-content">
+        <div class="connect-heading">
+          <h2 id="connect-title">Find me in a few places.</h2>
+          <p>For work, code, conversation, and the occasional photograph.</p>
+        </div>
+
+        <div class="primary-links">
+          {{ range $index, $profile := hugo.Data.socials.primary }}
+          <a class="profile-card" href="{{ $profile.url }}" rel="noreferrer">
+            <span class="profile-number">0{{ add $index 1 }}</span>
+            <span class="profile-copy">
+              <span class="profile-name">{{ $profile.name }}</span>
+              <span class="profile-description">{{ $profile.description }}</span>
+            </span>
+            <span class="profile-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          {{ end }}
+        </div>
+
+        <div class="secondary-links">
+          <h3>Elsewhere</h3>
+          <ul>
+            {{ range hugo.Data.socials.secondary }}
+            <li>
+              <a href="{{ .url }}" rel="noreferrer">
+                <span>{{ .name }}</span>
+                <span class="secondary-handle">{{ .handle }}</span>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{{ end }}

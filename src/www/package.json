@@ -1,0 +1,22 @@
+{
+  "name": "antonrademaker.com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The personal website of Anton Rademaker.",
+  "scripts": {
+    "build": "hugo --minify",
+    "dev": "hugo server --buildDrafts --disableFastRender",
+    "preview": "hugo server --bind 127.0.0.1 --port 1313 --disableFastRender",
+    "test": "npm run build && npm run test:html && npm run test:a11y && npm run test:lighthouse",
+    "test:a11y": "playwright test",
+    "test:html": "html-validate \"public/**/*.html\"",
+    "test:lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.62.1",
+    "html-validate": "^11.10.0",
+    "hugo-bin": "^0.162.0"
+  }
+}
