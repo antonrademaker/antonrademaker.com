@@ -10,13 +10,16 @@
     "test": "npm run build && npm run test:html && npm run test:a11y && npm run test:lighthouse",
     "test:a11y": "playwright test",
     "test:html": "html-validate \"public/**/*.html\"",
-    "test:lighthouse": "lhci autorun"
+    "test:lighthouse": "node scripts/lighthouse.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.62.1",
     "html-validate": "^11.10.0",
-    "hugo-bin": "^0.162.0"
+    "hugo-bin": "^0.162.0",
+    "lighthouse": "^13.4.1"
+  },
+  "allowScripts": {
+    "hugo-bin@0.162.0": true
   }
 }

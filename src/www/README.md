@@ -23,9 +23,11 @@ Create a production build with `npm run build`. The generated site is written to
 - axe-core accessibility checks
 - Chromium, Firefox, and WebKit browser checks on desktop and mobile profiles
 - Keyboard focus, reduced-motion, responsive overflow, link-attribute, and content checks
-- Lighthouse accessibility and SEO assertions, with performance and best-practices thresholds
+- Lighthouse CLI accessibility and SEO gates, with performance and best-practices thresholds
 
 Playwright supports the WebKit project on Windows, Linux, and macOS. It uses Playwright's WebKit build rather than Apple's branded Safari.
+
+The Lighthouse check uses the standalone Lighthouse CLI. It starts a temporary Hugo server, writes HTML and JSON reports to `.lighthouse/`, fails for accessibility or SEO scores below 100%, and warns for performance or best-practices scores below 90%.
 
 ## Writing posts
 
