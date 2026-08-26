@@ -1,6 +1,7 @@
 import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { spawn } from 'node:child_process';
+import { chromium } from '@playwright/test';
 
 const host = '127.0.0.1';
 const port = process.env.LIGHTHOUSE_PORT ?? '1314';
@@ -11,9 +12,9 @@ const hugoEntryPoint = resolve('node_modules/hugo-bin/bin/cli.js');
 const lighthouseCommand = process.execPath;
 const lighthouseEntryPoint = resolve('node_modules/lighthouse/cli/index.js');
 
-function run(command, args) {
+function run(command, args, env = process.env) {
   return new Promise((resolveCommand, reject) => {
-    const child = spawn(command, args, { stdio: 'inherit', windowsHide: true });
+    const child = spawn(command, args, { stdio: 'inherit', windowsHide: true, env });
 
     child.on('error', reject);
     child.on('exit', (code, signal) => {
@@ -53,6 +54,8 @@ async function main() {
     host,
     '--port',
     port,
+    '--baseURL',
+    siteUrl,
     '--disableFastRender'
   ], { stdio: 'inherit', windowsHide: true });
 
@@ -64,7 +67,7 @@ async function main() {
       '--output=html',
       `--output-path=${reportPath}`,
       '--quiet'
-    ]);
+    ], { ...process.env, CHROME_PATH: chromium.executablePath() });
 
     const report = JSON.parse(await readFile(`${reportPath}.report.json`, 'utf8'));
     const checks = [
