@@ -43,4 +43,4 @@ The post archetype supplies title, date, draft status, description, and tags. Th
 
 The GitHub Actions workflow builds and tests changes on pull requests and pushes to `main`. A successful push deploys the `public/` directory to GitHub Pages.
 
-The repository is configured for `www.antonrademaker.com` through `static/CNAME`. Enable GitHub Actions as the Pages source in the repository settings and point the `www` DNS record at GitHub Pages. Configure `antonrademaker.nl` as a permanent redirect to `https://www.antonrademaker.com/` through the domain registrar or DNS provider; GitHub Pages does not provide a second-domain redirect service.
+Enable GitHub Actions as the Pages source in the repository settings. The repository must be named `antonrademaker.github.io` for the site to be served at `https://antonrademaker.github.io/`. A custom domain can be configured later by adding a `static/CNAME` file and changing `baseURL`.

@@ -34,7 +34,7 @@ export default defineConfig({
     }
   ],
   webServer: {
-    command: 'npm run preview',
+    command: 'npm run preview -- --baseURL=http://127.0.0.1:1313/',
     url: 'http://127.0.0.1:1313',
     reuseExistingServer: !process.env.CI,
     timeout: 120000
