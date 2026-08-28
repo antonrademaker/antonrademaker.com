@@ -63,6 +63,7 @@ async function main() {
     await waitForServer(siteUrl);
     await run(lighthouseCommand, [lighthouseEntryPoint,
       siteUrl,
+      '--chrome-flags=--headless=new',
       '--output=json',
       '--output=html',
       `--output-path=${reportPath}`,
