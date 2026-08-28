@@ -11,6 +11,9 @@ const hugoCommand = process.execPath;
 const hugoEntryPoint = resolve('node_modules/hugo-bin/bin/cli.js');
 const lighthouseCommand = process.execPath;
 const lighthouseEntryPoint = resolve('node_modules/lighthouse/cli/index.js');
+const chromeFlags = process.platform === 'linux'
+  ? '--headless=new --no-sandbox --disable-dev-shm-usage'
+  : '--headless=new';
 
 function run(command, args, env = process.env) {
   return new Promise((resolveCommand, reject) => {
@@ -63,7 +66,7 @@ async function main() {
     await waitForServer(siteUrl);
     await run(lighthouseCommand, [lighthouseEntryPoint,
       siteUrl,
-      '--chrome-flags=--headless=new',
+      `--chrome-flags=${chromeFlags}`,
       '--output=json',
       '--output=html',
       `--output-path=${reportPath}`,
