@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /src/www
+    schedule:
+      interval: daily
+      time: "15:00"
+      timezone: Etc/UTC
+    open-pull-requests-limit: 8
+    groups:
+      browser-testing:
+        dependency-type: development
+        patterns:
+          - "@axe-core/playwright"
+          - "@playwright/test"
+        update-types:
+          - minor
+          - patch
+      site-quality:
+        dependency-type: development
+        patterns:
+          - html-validate
+          - lighthouse
+        update-types:
+          - minor
+          - patch
+      hugo:
+        dependency-type: development
+        patterns:
+          - hugo-bin
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      time: "15:00"
+      timezone: Etc/UTC
+    open-pull-requests-limit: 8
