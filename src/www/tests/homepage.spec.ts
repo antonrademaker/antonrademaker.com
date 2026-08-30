@@ -37,7 +37,7 @@ test.describe('homepage', () => {
     expect(links.map((link) => link.href)).toEqual(profileLinks);
     expect(links.every((link) => link.rel === 'noreferrer' && link.target === null)).toBe(true);
     await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
-    await expect(page.getByRole('link', { name: /blog/i })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: /blog/i })).toHaveAttribute('href', '/posts/');
     await expect(page.locator('.eyebrow-index, .section-marker span, .profile-number')).toHaveCount(0);
     await expect(page.locator('.eyebrow')).toContainText('Based in Ede / curious by nature / always tinkering');
     await expect(page.locator('.section-marker').first()).toHaveCSS('font-family', /ui-monospace/);

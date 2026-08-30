@@ -37,7 +37,7 @@ Future posts belong in `content/posts/`. Create one with:
 hugo new content/posts/my-first-post.md
 ```
 
-The post archetype supplies title, date, draft status, description, and tags. The post layout is already present, but the homepage intentionally does not show a blog link until the first post is ready.
+The post archetype supplies title, date, draft status, description, and tags. The post layout and Blog navigation link are already present, so published posts are available from the site's primary navigation.
 
 ## Deployment and domains
 
