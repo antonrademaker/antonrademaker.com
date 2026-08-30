@@ -39,3 +39,7 @@ updates:
       time: "15:00"
       timezone: Etc/UTC
     open-pull-requests-limit: 8
+    groups:
+      github-actions:
+        patterns:
+          - "*"
