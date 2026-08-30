@@ -1,0 +1,86 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build site",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test site",
+      "type": "process",
+      "command": "npm",
+      "args": ["test"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate HTML",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "test:html"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run accessibility tests",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "test:a11y"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Lighthouse",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "test:lighthouse"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Hugo dev server",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Preview site",
+      "type": "process",
+      "group": {
+        "kind": "build"
+      },
+      "command": "npm",
+      "args": ["run", "preview"],
+      "options": {
+        "cwd": "${workspaceFolder}/src/www"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
