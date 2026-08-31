@@ -49,7 +49,7 @@ This runs the Hugo build, HTML validation, Playwright checks across Chromium, Fi
 
 ## RSS
 
-Blog posts are published as an RSS feed at `/posts/index.xml`. A link is available on the posts page and in the site footer. The site-wide feed at `/index.xml` is disabled since the posts feed covers all blog content.
+Blog posts are published as an RSS feed at `/posts/index.xml`. A link is available on the posts page and in the site footer. Hugo also generates per-tag and per-category feeds (e.g. `/tags/hugo/index.xml`); these are intentional. Only the site-wide feed at `/index.xml` is disabled, since the posts feed covers all blog content.
 
 ## Publishing
 

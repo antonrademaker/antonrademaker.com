@@ -69,7 +69,7 @@ This runs the complete validation suite:
 - `baseURL = 'https://antonrademaker.github.io/'` — the site is deployed to a project repository (repo named `antonrademaker.github.io`)
 - `unsafe = false` in markup.goldmark.renderer — HTML injection in markdown is disabled for safety
 - Posts belong in `content/posts/` and use the `posts.md` archetype
-- `[outputs] home = ['HTML']` disables Hugo's default site-wide RSS feed at `/index.xml`. The only feed is `/posts/index.xml` (RSS for the `posts` section), linked via `<link rel="alternate">` in `layouts/_partials/head.html` and visible links in `layouts/list.html` and `layouts/_partials/site-footer.html`
+- `[outputs] home = ['HTML']` disables Hugo's default site-wide RSS feed at `/index.xml`. `/posts/index.xml` (RSS for the `posts` section) is linked via `<link rel="alternate">` in `layouts/_partials/head.html` and visible links in `layouts/list.html` and `layouts/_partials/site-footer.html`. Hugo also generates taxonomy feeds (e.g. `/tags/hugo/index.xml`, `/categories/index.xml`) via `list.html`; this is intentional, not a bug — the "Subscribe via RSS" link on `list.html` appears for any list page (section or taxonomy) that has an RSS output
 
 ### Testing Requirements
 Before pushing changes:
