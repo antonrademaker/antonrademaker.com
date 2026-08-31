@@ -10,6 +10,8 @@ Welcome to the first post on my new blog. This website is deliberately small for
 
 My old websites were built with languages and frameworks I haven't used in more than 15 years. But I was still paying an increasing amount each year to host the websites. So time for a change!
 
+<!--more-->
+
 I checked the old websites for relevance today and I found that there was not much value in them anymore. So I decided to start clean. Having seen the rise of static websites (and the low cost of hosting them) I decided to give static site generation a try.
 
 That made the first technical decision surprisingly important: I did not need a product platform or a big JavaScript application. I needed a writing tool that could turn a handful of source files into a fast, dependable website. [Hugo](https://gohugo.io/) was a good fit for that constraint.
