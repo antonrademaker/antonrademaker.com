@@ -29,6 +29,10 @@ Playwright supports the WebKit project on Windows, Linux, and macOS. It uses Pla
 
 The Lighthouse check uses the standalone Lighthouse CLI. It starts a temporary Hugo server, writes HTML and JSON reports to `.lighthouse/`, fails for accessibility or SEO scores below 100%, and warns for performance or best-practices scores below 90%.
 
+## RSS feed
+
+Blog posts publish an RSS 2.0 feed at `/posts/index.xml`, generated automatically by Hugo from the `posts` section. The feed is linked via `<link rel="alternate" type="application/rss+xml">` in the page head (`layouts/_partials/head.html`), and visible links appear on the posts list page and in the site footer. The site-wide feed at `/index.xml` is disabled (`[outputs] home = ['HTML']` in `hugo.toml`) so the posts feed is the only feed readers discover.
+
 ## Writing posts
 
 Future posts belong in `content/posts/`. Create one with:
