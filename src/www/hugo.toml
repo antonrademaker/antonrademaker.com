@@ -13,3 +13,6 @@ unsafe = false
 [markup.highlight]
 noClasses = false
 style = 'github'
+
+[outputs]
+home = ['HTML']

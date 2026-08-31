@@ -47,6 +47,10 @@ This runs the Hugo build, HTML validation, Playwright checks across Chromium, Fi
 - `src/www/tests/` contains Playwright tests.
 - `.github/workflows/site.yml` builds, validates, and deploys the site to GitHub Pages.
 
+## RSS
+
+Blog posts are published as an RSS feed at `/posts/index.xml`. A link is available on the posts page and in the site footer. The site-wide feed at `/index.xml` is disabled since the posts feed covers all blog content.
+
 ## Publishing
 
 Changes pushed to `main` are validated and deployed by GitHub Actions. The GitHub Pages source is configured as **GitHub Actions**. The live site is [antonrademaker.github.io](https://antonrademaker.github.io/).

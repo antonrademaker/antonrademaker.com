@@ -3,6 +3,7 @@
   <section class="article" aria-labelledby="list-title">
     <p class="eyebrow">{{ .Title }}</p>
     <h1 id="list-title">{{ .Title }}</h1>
+    {{ with .OutputFormats.Get "rss" }}<p class="text-link"><a href="{{ .RelPermalink }}">Subscribe via RSS</a></p>{{ end }}
     <div class="post-list">
       {{ range .Pages }}
       <article>
