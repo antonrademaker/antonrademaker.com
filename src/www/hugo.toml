@@ -9,3 +9,7 @@ description = 'Anton Rademaker is a Software Architect / Lead Engineer at ilionx
 
 [markup.goldmark.renderer]
 unsafe = false
+
+[markup.highlight]
+noClasses = false
+style = 'github'

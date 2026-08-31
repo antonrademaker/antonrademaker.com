@@ -400,6 +400,33 @@ h3 {
   line-height: 1.45;
 }
 
+.latest-post-content {
+  max-width: 48rem;
+}
+
+.latest-post-date {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.latest-post-content h2 {
+  max-width: 16ch;
+  margin-bottom: 1.5rem;
+  color: var(--pine-dark);
+  font-size: 3.75rem;
+  line-height: 0.98;
+}
+
+.latest-post-excerpt {
+  margin-bottom: 2rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.latest-post-excerpt p:last-child {
+  margin-bottom: 0;
+}
+
 .practice-list {
   align-self: end;
   border-top: 1px solid var(--line);
@@ -683,11 +710,13 @@ h3 {
   }
 
   .about-copy h2,
-  .connect-heading h2 {
+  .connect-heading h2,
+  .latest-post-content h2 {
     font-size: 3rem;
   }
 
-  .about-copy p {
+  .about-copy p,
+  .latest-post-excerpt {
     font-size: 1.2rem;
   }
 
