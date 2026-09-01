@@ -31,7 +31,7 @@ The Lighthouse check uses the standalone Lighthouse CLI. It starts a temporary H
 
 ## RSS feed
 
-Blog posts publish an RSS 2.0 feed at `/posts/index.xml`, generated automatically by Hugo from the `posts` section. The feed is linked via `<link rel="alternate" type="application/rss+xml">` in the page head (`layouts/_partials/head.html`), and visible links appear on the posts list page and in the site footer. The site-wide feed at `/index.xml` is disabled (`[outputs] home = ['HTML']` in `hugo.toml`) so the posts feed is the only feed readers discover.
+Blog posts publish an RSS 2.0 feed at `/posts/index.xml`, generated automatically by Hugo from the `posts` section. The feed is linked via `<link rel="alternate" type="application/rss+xml">` in the page head (`layouts/_partials/head.html`), and visible links appear on the posts list page and in the site footer. Hugo also generates taxonomy feeds (e.g. `/tags/hugo/index.xml`, `/categories/index.xml`) via the same `list.html` template; these are intentional and not disabled. Only the site-wide feed at `/index.xml` is disabled (`[outputs] home = ['HTML']` in `hugo.toml`).
 
 ## Writing posts
 
